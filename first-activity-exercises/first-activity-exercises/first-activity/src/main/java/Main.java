@@ -95,11 +95,35 @@ public class Main {
     }
 
     public int getNumberOfDigits(int number){
+		float a=number;
+		int c=0;
+		while (a>=1){
+			a=a/10;
+			c=c+1;
+		}
+		return c;
     }
 
     public int rotateNumber(int number){
+		int y=0;
+		int x;
+		while(number>=1){
+			x=number%10;
+			y=x+(y*10);
+			number=number/10;
+		}
+		return y;
     }
 
     public int sumOffirstNNumbersMultiplesOfFiveOrThree(int N){
+		int a=0;
+		for(int i=1; i<=N; i++){
+			if(i%5==0 || i%3==0){
+				a=a+i;
+			}
+		}
+		return a;
+
     }
+
 }
